@@ -1,0 +1,435 @@
+:root
+{
+    --color1: #D65A31;
+    --color2: #222831;
+    --color3: #393E46;
+    --color4: #DDDDDD;
+    --color5: #c1c1c1;
+    --color6: #FFA559;
+    --box-sh: 0px 0px 10px -5px #333;
+    --box-sh2: 0px 3px 5px -5px rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+*
+{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html
+{
+    scroll-behavior: smooth;
+}
+body 
+{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--color5);
+    display: flex;
+    justify-content: center;
+    background-image: url();
+}
+a
+{
+    text-decoration: none;
+}
+ul
+{
+    list-style: none;
+}
+.conteaner
+{
+    width:400px;
+    height:auto;
+}
+.conteaner header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    position: relative;
+}
+.conteaner header::before
+{
+    content: '';
+    background-color: var(--color6);
+    width: 180px;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.conteaner header::after
+{
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: var(--color1);
+    position: absolute;
+    left: 50%;
+    bottom: -29px;
+    border: 4px var(--color5) solid;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+.name {
+    height: 100%;
+    width: 100%;
+    font-family: Arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    display: block;
+    font: 8.5em 'Montserrat';
+    width: 400px;
+    height: 100%;
+    margin-top: -20px;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+    stroke: #FFA559;
+    animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+    stroke: #454545;
+    animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+    stroke: #FF6000;
+    animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+    stroke: #454545;
+    animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+    stroke: #FFA559;
+    animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
+}
+/*===================================================================================*/
+.conteaner .home
+{
+    width: 100%;
+    height: auto;
+}
+.conteaner .home .card1
+{
+    width: 100%;
+    height: 80px;
+    padding-right: 10px;
+    margin-top: 50px;
+    margin-bottom: -20px;
+    display: flex;
+    justify-content: space-between;
+}
+.conteaner .home .card1 img
+{
+    width: 90px;
+    height: 90px;
+    box-shadow: var(--box-sh);
+    border-radius: 50%;
+    margin-left: 5px;
+
+}
+.conteaner .home .card1 .titel1
+{
+    width: 285px;
+    font-size: 25px;
+    margin-top: 10px;
+    padding:5px;
+    color: var(--color4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.conteaner .home .card1 .titel2
+{
+    width: 285px;
+    text-align: left;
+    font-size: 15px;
+    padding: 5px;
+    box-shadow: var(--box-sh2);
+    letter-spacing: 1.8px;
+    color: var(--color3);
+}
+
+/* ======================================================= */
+.conteaner .list
+{
+    width: 100%;
+    height: 50px;
+    margin-top: 60px;
+}
+.conteaner .list nav
+{
+    height: 50px;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    /* gap: 15px; */
+    overflow: scroll;
+}
+.conteaner .list a
+{
+    width: 110px;
+    height:40px;
+    margin:5px 5px 0 5px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    color: var(--color1);
+    box-shadow: var(--box-sh);
+    border-left: solid 2px var(--color6);
+    border-right: solid 2px var(--color6);
+}
+
+/* ======================================================= */
+.conteaner .sh
+{
+    width: calc(100% -20px);
+    height: auto;
+    margin: 0 10px;
+}
+.conteaner .sh .card
+{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 16px;
+    box-shadow: var(--box-sh);
+    margin-top: 30px;
+}
+.conteaner .sh .card .rghit
+{
+    width: calc(100% - 90px);
+    height: 80px;
+    padding: 10px;
+
+}
+.conteaner .sh .card .rghit  .price
+{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.conteaner .sh .card .rghit  .price p
+{
+    color: var(--color3);
+    font-size: 16px;
+    margin: 0 2px;
+    border-bottom: solid 1px var(--color1);
+}
+.conteaner .sh .card .rghit  .price i
+{
+    font-size: 10px;
+    color: var(--color1);
+    padding: 2px;
+    margin-top: -10px;
+}
+.conteaner .sh .card .rghit .name1
+{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color3);
+}
+.conteaner .sh .card .rghit .count
+{
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-right: -10px;
+}
+.conteaner .sh .card .left
+{
+    height: 90px;
+    box-shadow: var(--box-sh);
+    border-radius: 16px;
+}
+.conteaner .sh .card .left img
+{
+    width: 90px;
+    height: 90px;
+    padding: 4px;
+    border-radius: 16px;
+}
+/* ======================================================= */
+.conteaner .d 
+{
+    width: 100%;
+    height: auto;
+    /* margin-top: 10px; */
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 15px;
+    padding: 10px;
+}
+.card3 {
+    width: 115px;
+    height: 150px;
+    position: relative;
+    border-radius: 18px;
+    margin-top: 40px;
+    box-shadow: var(--box-sh);
+    text-align: center;
+}
+
+.card3 img {
+    width: 60px;
+    height: 90px;
+    margin-top: -30px;
+}
+
+.card3 .name {
+    width: 100%;
+    height: 50px;
+    margin-right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card3 .name h2 {
+    font-size: 20px;
+    color: var(--color3);
+
+}
+
+.card3 .name .price {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.card3 .name .price p {
+    font-size: 19px;
+    color: var(--color3);
+    border-bottom: solid 1px var(--color6);
+}
+
+.card3 .name .price i {
+    font-size: 11px;
+    margin-top: -12px;
+    color: var(--color4);
+    margin-right: 2px;
+    width: 15px;
+    height: 15px;
+    padding: 2px 2.5px;
+    border-radius: 2px;
+    background-color: var(--color6);
+}
+
+.card3 .cont {
+    width: 90px;
+    height: 30px;
+    margin-right: 12.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-top: 50px;
+    background-color: #454545;
+    
+}
+
+.card3 .cont p {
+    font-size: 20px;
+    color: var(--color5);
+    padding: 5px;
+    border-radius: 16px;
+}
+/* ======================================================= */
+
+
+.last
+{
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    box-shadow: var(--box-sh2);
+}
+.last h2
+{
+    font-size: 18px;
+    padding:5px;
+    /* border-bottom: solid 1px var(--color3); */
+    color: var(--color3);
+}
+.conteaner .last::before {
+    content: '';
+    background-color: var(--color6);
+    width: 180px;
+    height: 2px;
+    position: absolute;
+    top: -1px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.conteaner .last::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: var(--color1);
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    border: 4px var(--color5) solid;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
